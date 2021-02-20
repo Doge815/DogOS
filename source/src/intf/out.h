@@ -24,7 +24,7 @@ typedef enum {
 } Color;
 
 void print_char(char character);
-void print_string(char* string);
+void print_string(const char* string);
 void print_clear(bool resetPos);
 void print_push();
 void print_newLine();

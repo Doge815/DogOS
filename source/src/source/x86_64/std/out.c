@@ -22,7 +22,7 @@ struct Symbol ToSymbol(char _character)
 bool isprint(char character)
 {
     uint8_t val = (uint8_t) character;
-    return (val > 32 && val < 127);
+    return (val > 31 && val < 127);
 }
 
 void print_char(char character)
@@ -51,7 +51,7 @@ void print_char(char character)
     }
 }
 
-void print_string(char* string)
+void print_string(const char* string)
 {
     for (uint16_t i = 0; true; i++)
     {
@@ -91,7 +91,7 @@ void print_push()
     {
         for (uint8_t u = 0; u < Cols; u++)
         {
-            buffer[(i - 1) * Rows + u] = buffer[i * Rows + u];
+            buffer[(i - 1) * Cols + u] = buffer[i * Cols + u];
         }
     }
     clearRow(Rows - 1);
